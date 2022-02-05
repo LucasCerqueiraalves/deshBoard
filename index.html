@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeshBoard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+           
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><img src="assets/icones/apple.png" alt="Apple"/></span>
+                        <span class="title"><h2>Marca</h2></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><img src="assets/icones/home.png" alt="home"/></span>
+                        <span class="title">Painel de cntrole</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><img src="assets/icones/user.png" alt="usuario"/></span>
+                        <span class="title">Clientes</span>
+                    </a>
+                    
+                </li>
+
+                <li>
+                    <A href="#">
+                        <span class="icon"><img src="assets/icones/chat.png" alt="Message"/></span>
+                        <span class="title">Mensagem</span>
+                    </A>
+                   
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><img src="assets/icones/help.png" alt="help"/></span>
+                        <span class="title">Help</span>
+                    </a>
+                   
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><img src="assets/icones/gear.png" alt="Settings"/></span>
+                        <span class="title">Configurações</span>
+                    </a>
+                    
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><img src="assets/icones/password.png" alt="Password"/></span>
+                        <span class="title">Senha</span>
+                    </a>
+                    
+                </li>
+
+                <li>
+                    <a href="#">    
+                        <span class="icon"><img src="assets/icones/logout.png" alt="Sing out"/></span>
+                        <span class="title">Sair</span>
+                    </a>
+                   
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle active" onclick="toggle()"><img src="assets/icones/menu.png"/></div>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Procure Aqui"/>
+                        <img src="assets/icones/search.png" alt="pesquisa"/>
+                    </label>
+                    
+                </div>
+                <div class="user">
+                    <img src="assets/image/usuarios.png" alt="Foto de Usuario"/>
+                </div>
+            </div>
+
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">1,042</div>
+                        <div class="cardName">Visualizações diarias</div>
+                    </div>
+                    <div class="iconBox">
+                        <img src="assets/icones/view.png" alt="view" />
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">80</div>
+                        <div class="cardName">vendas</div>
+                    </div>
+                    <div class="iconBox">
+                        <img src="assets/icones/cart.png" alt="cart" />
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">208</div>
+                        <div class="cardName">Comentários</div>
+                    </div>
+                    <div class="iconBox">
+                        <img src="assets/icones/comments.png" alt="comments" />
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">R$ 6,042</div>
+                        <div class="cardName">Ganho</div>
+                    </div>
+                    <div class="iconBox">
+                        <img src="assets/icones/real.png" alt="real" />
+                    </div>
+                </div>
+                
+            </div>
+
+            <!--Add Charts-->
+            <div class="graphBox">
+                <div class="box">
+                    <canvas width="58px" id="myChart"></canvas>
+                </div>
+                <div class="box">
+                    <canvas id="earning"></canvas>
+                </div>
+            </div>
+            
+
+            <div class="details">
+                <div class="recentOrders">
+                    <div class="cardHeader">
+                        <h2>Pedidos Recentes</h2>
+                        <a href="#" class="btn">Ver tudo</a>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                              <td>Nome</td>
+                              <td>Preço</td>
+                              <td>Pagamento</td>
+                              <td>Status</td>
+ 
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Geladeira</td>
+                                <td>R$ 1.500,00</td>
+                                <td>Paga</td>
+                                <td><span class="status delivered">Entregue</span></td>
+                            </tr>
+                            <tr>
+                                <td>Window Coolers</td>
+                                <td>R$ 500,00</td>
+                                <td>Vencimento</td>
+                                <td><span class="status pending">Pendente</span></td>
+                            </tr>
+                            <tr>
+                                <td>Caixa de som</td>
+                                <td>R$ 760,00</td>
+                                <td>Pago</td>
+                                <td><span class="status Return">Retorna</span></td>
+                            </tr>
+                            <tr>
+                                <td>Hp Laptop</td>
+                                <td>R$ 3.500,00</td>
+                                <td>Vencimento</td>
+                                <td><span class="status inprogress">Em andamento</span></td>
+                            </tr>
+                            <tr>
+                                <td>TV Smart</td>
+                                <td>R$ 1.500,00</td>
+                                <td>Pago</td>
+                                <td><span class="status delivered">Entregue</span></td>
+                            </tr>
+                            <tr>
+                                <td>Window</td>
+                                <td>R$ 500,00</td>
+                                <td>Vencimento</td>
+                                <td><span class="status pending">Em andamento</span></td>
+                            </tr>
+                            <tr>
+                                <td>Tenis</td>
+                                <td>R$ 760,00</td>
+                                <td>Pago</td>
+                                <td><span class="status Return">Retorna</span></td>
+                            </tr>
+                            <tr>
+                                <td>Laptop LG</td>
+                                <td>R$ 3.500,00</td>
+                                <td>Vencimento</td>
+                                <td><span class="status inprogress">Em andamento</span></td>
+                            </tr>
+                            <tr>
+                                <td>Apple Watch</td>
+                                <td>R$ 3.500,00</td>
+                                <td>Pago</td>
+                                <td><span class="status delivered">Entregue</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="recentCustomers">
+                    <div class="cadHeader">
+                        <h2>Clientes Recentes</h2>
+                        
+                    </div>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td width:60px><div class="imgBox"><img src="assets/image/usuarios.png"/></div> </td>
+                                <td><h4>David<br><span>Italy</span></h4></td>
+                            </tr>
+                            <tr>
+                                <td width:60px><div class="imgBox"><img src="assets/image/usuarios.png"/></div> </td>
+                                <td><h4>David<br><span>Italy</span></h4></td>
+                            </tr>
+                            <tr>
+                                <td width:60px><div class="imgBox"><img src="assets/image/usuarios.png"/></div> </td>
+                                <td><h4>David<br><span>Italy</span></h4></td>
+                            </tr>
+                            <tr>
+                                <td width:60px><div class="imgBox"><img src="assets/image/usuarios.png"/></div> </td>
+                                <td><h4>David cerqueira alves<br><span>Italy</span></h4></td>
+                            </tr>
+                            <tr>
+                                <td width:60px><div class="imgBox"><img src="assets/image/usuarios.png"/></div> </td>
+                                <td><h4>David<br><span>Italy</span></h4></td>
+                            </tr>
+                            <tr>
+                                <td width:60px><div class="imgBox"><img src="assets/image/usuarios.png"/></div> </td>
+                                <td><h4>David<br><span>Italy</span></h4></td>
+                            </tr>
+                            <tr>
+                                <td width:60px><div class="imgBox"><img src="assets/image/usuarios.png"/></div> </td>
+                                <td><h4>David<br><span>Italy</span></h4></td>
+                            </tr>
+                            <tr>
+                                <td width:60px><div class="imgBox"><img src="assets/image/usuarios.png"/></div> </td>
+                                <td><h4>David<br><span>Italy</span></h4></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
+    <script type="text/javascript" src="assets/js/my-charts.js"></script>
+
+</body>
+</html>
